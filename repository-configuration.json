@@ -1,156 +1,42 @@
 {
-    "gammaAccess": {
-        "url": "",
-        "token": ""
-    },
-    "repositories": [
-        {
-            "dataDir": "",
-            "repository": {
-                "uid": "0bddc14ef82d626d74901cf738108dc0",
-                "projectName": "ZXing",
-                "languages": [
-                    "JAVA"
-                ],
-                "sources": {
-                    "baseDir": "",
-                    "exclusions": [
-                        "(?i)(test|generated|mock|thirdparty|third-party|3rd-party|3rdparty|external)"
-                    ]
-                }
-            },
-            "settings": {
-                "additionalOptions": [],
-                "includePaths": []
-            },
-            "modules": {
-                "codeissues": [
-                    {
-                        "name": "gamma_java",
-                        "enabled": true,
-                        "config": {
-                            "rules": [],
-                            "options": []
-                        }
-                    },
-                    {
-                        "name": "embold_sec",
-                        "enabled": false,
-                        "config": {
-                            "rules": [],
-                            "options": [
-                                {
-                                    "name": "reportDir",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": true
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "pmd",
-                        "enabled": true,
-                        "config": {
-                            "rules": [],
-                            "options": [
-                                {
-                                    "name": "javaVersion",
-                                    "type": "text",
-                                    "value": "1.8",
-                                    "required": false
-                                },
-                                {
-                                    "name": "ruleSets",
-                                    "type": "text",
-                                    "value": "",
-                                    "required": true
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "gamma_generic",
-                        "enabled": false,
-                        "config": {
-                            "rules": [],
-                            "options": [
-                                {
-                                    "name": "reportDir",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": true
-                                }
-                            ]
-                        }
-                    }
-                ],
-                "coverage": [
-                    {
-                        "name": "clover",
-                        "enabled": true,
-                        "config": {
-                            "rules": [],
-                            "options": [
-                                {
-                                    "name": "reportDir",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": true
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "jacoco",
-                        "enabled": true,
-                        "config": {
-                            "rules": [],
-                            "options": [
-                                {
-                                    "name": "binaryReportPath",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": false
-                                },
-                                {
-                                    "name": "xmlReportPath",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": false
-                                }
-                            ]
-                        }
-                    }
-                ],
-                "relevance": [
-                    {
-                        "name": "relevance",
-                        "enabled": true,
-                        "config": {
-                            "rules": [],
-                            "options": []
-                        }
-                    }
-                ],
-                "unittest": [
-                    {
-                        "name": "junit",
-                        "enabled": true,
-                        "config": {
-                            "rules": [],
-                            "options": [
-                                {
-                                    "name": "reportDir",
-                                    "type": "upload",
-                                    "value": "",
-                                    "required": true
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }
-        }
-    ]
+	"gammaAccess": {
+		"url": "http://192.168.2.38:3001/",
+		"token": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYyODA2NTAxOTcyMSwiaWF0IjoxNjI4MDY1MDE5fQ.RehuKmSsWu7BaRvNgKGBMreOsy4d1GHXju53ujAr5QQLqqOOG48_sf7l4L_9aHcq40_hSWSiMR2coR4kXTJutQ"
+	},
+	"repositories": [
+		{
+			"dataDir": "$WORKSPACE/temp",
+			"repository": {
+				"uid": "0bddc14ef82d626d74901cf738108dc0",
+				"projectName": "ZXing",
+				"languages": [
+					"JAVA" 
+				],
+				"sources": {
+					"baseDir": "/var/jenkins_home/jobs/Githubdemo_pipeline2/workspace",
+					"exclusions": []
+				}
+			},
+			"settings": {
+				"additionalOptions": [],
+				"includePaths": []
+			},
+			"modules": {
+				"relevance": [
+					{
+						"name": "relevance",
+						"config": {
+							"rules": [],
+							"options": [
+								{
+									"name": "mode",
+									"value": "git"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	]
 }
